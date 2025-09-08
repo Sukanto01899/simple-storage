@@ -1,11 +1,29 @@
 {
-  "dependencies": {
-    "dotenv": "^17.2.2",
-    "ethers": "^6.15.0",
-    "fs-extra": "^11.3.1",
-    "solc": "0.8.13"
-  },
-  "scripts": {
-    "compile": "yarn solcjs --bin --abi --include-path node_modules/ --base-path . -o .  SimpleStorage.sol"
-  }
+    "dependencies": {
+        "@types/fs-extra": "^11.0.4",
+        "dotenv": "^17.2.2",
+        "ethers": "^6.15.0",
+        "fs-extra": "^11.3.1",
+        "solc": "0.8.13"
+    },
+    "scripts": {
+        "compile": "yarn solcjs --bin --abi --include-path node_modules/ --base-path . -o .  SimpleStorage.sol"
+    },
+    "name": "ethers-simple-storage",
+    "version": "1.0.0",
+    "description": "",
+    "main": "deploy.js",
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Sukanto01899/simple-storage.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Sukanto01899/simple-storage/issues"
+    },
+    "homepage": "https://github.com/Sukanto01899/simple-storage#readme",
+    "type": "module"
 }

@@ -1,6 +1,11 @@
-const ethers = require("ethers");
-const fs = require("fs-extra");
-require("dotenv").config();
+// const ethers = require("ethers");
+// const fs = require("fs-extra");
+// require("dotenv").config();
+
+import { ethers } from "ethers";
+import fs from 'fs'
+// import * as fs from "fs-extra";
+import "dotenv/config"
 
 async function main() {
     // http://127.0.0.1:7545
@@ -10,6 +15,8 @@ async function main() {
     });
     // const wallet = new ethers.Wallet("0xec19a1b7df65c3b418ab355c4a6d7dad00a147a363a779b4bc57182faf4a361c", provider);
     const encryptedjson = fs.readFileSync("./.encryptedKey.json", "utf-8");
+
+    // read wallet using encrypted private key
     let wallet = ethers.Wallet.fromEncryptedJsonSync(
         encryptedjson,
         process.env.PASSWORD
